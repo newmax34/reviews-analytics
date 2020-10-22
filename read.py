@@ -14,8 +14,10 @@ with open("reviews.txt", "r") as f:
         count += 1
         if count % 1000 == 0:
             print(len(data))
-l = len(data)
-print("Total reviews: ", l)
-print(data[0])
-print("--------------")
-print(data[1])
+        
+print("Finished reading. Total reviews:", len(data))
+
+sum_len = 0
+for d in data: 
+    sum_len = sum_len + len(d)
+print ("The average characters of the review (including space) are", sum_len/len(data), "characters.")
