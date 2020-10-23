@@ -20,4 +20,10 @@ print("Finished reading. Total reviews:", len(data))
 sum_len = 0
 for d in data: 
     sum_len = sum_len + len(d)
-print ("The average characters of the review (including space) are", sum_len/len(data), "characters.")
+print ("The average characters of the review (including space) are:", sum_len/len(data), "characters.")
+
+new = []
+for d in data: 
+    if len(d) < 100:
+        new.append(d)
+print("Reviews less than 100 characters:", len(new))
